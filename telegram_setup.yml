@@ -1,0 +1,10 @@
+---
+- hosts: aservers
+  tasks:
+  - name: install telegram-desktop
+    apt: name=telegram-desktop update_cache=yes
+    become: yes
+
+  - name: remove telegram-desktop
+    apt: name=telegram-desktop state=absent
+    become: yes

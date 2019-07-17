@@ -1,0 +1,8 @@
+---
+ - hosts: all
+   tasks:
+   - name: create file on desktop
+     file:
+      path: ~/Desktop/new
+      state: touch
+      mode: 0777
